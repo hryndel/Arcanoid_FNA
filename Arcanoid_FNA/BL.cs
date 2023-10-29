@@ -26,7 +26,9 @@ namespace Arcanoid_FNA
             Content.RootDirectory = "Resources";
             Graphics.PreferredBackBufferHeight = 1000;
             Graphics.PreferredBackBufferWidth = 840;
-            BallXY.x = Graphics.PreferredBackBufferHeight / 2; 
+
+            Random random = new Random();
+            BallXY.x = random.Next(0, Graphics.PreferredBackBufferWidth - 50); 
             BallXY.y = Graphics.PreferredBackBufferHeight - 120;
 
             Blocks = new List<Block>();
